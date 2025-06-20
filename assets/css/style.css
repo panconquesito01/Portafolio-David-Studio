@@ -1,0 +1,197 @@
+/* style.css - Estilos personalizados para el portafolio */
+:root {
+  --color-bg: #181a1b;
+  --color-text: #f8f9fa;
+  --color-accent: #0d6efd;
+  --color-secondary: #6c757d;
+  --color-surface: #23272b;
+}
+[data-theme="light"] {
+  --color-bg: #f8f9fa;
+  --color-text: #181a1b;
+  --color-accent: #0d6efd;
+  --color-secondary: #6c757d;
+  --color-surface: #fff;
+}
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.navbar.bg-dark {
+  background: #181a1b !important;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+  transition: background 0.3s;
+  backdrop-filter: none;
+  border: none;
+}
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+.btn-primary {
+  background: var(--color-accent);
+  border: none;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #0b5ed7;
+}
+
+/* Estilos para el interruptor de tema */
+.theme-toggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--color-accent);
+}
+
+/* Filtro de proyectos */
+.filter-btn.active {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+/* Contadores animados */
+.counter {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Blog y testimonios */
+.blog-section, .testimonials-section {
+  margin-top: 3rem;
+}
+
+/* Habilidades */
+.skills-section {
+  margin-top: 3rem;
+}
+
+/* Botón volver arriba */
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: none;
+  z-index: 999;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: opacity 0.3s;
+}
+#backToTop.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Animación de tipeo */
+.typewriter {
+  display: inline-block;
+  border-right: 2px solid var(--color-accent);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink-caret 0.75s step-end infinite;
+}
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--color-accent); }
+}
+
+/* Estilos impresión CV */
+@media print {
+  body { background: #fff; color: #000; }
+  .navbar, .footer, #backToTop { display: none !important; }
+  .cv-section { display: block !important; }
+}
+
+/* Parallax básico */
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Estilos sección hero */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(120deg, #0d6efd 0%, #6610f2 50%, #20c997 100%);
+}
+.hero .vibrant-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(circle at 20% 30%, #0d6efd88 0%, transparent 60%),
+              radial-gradient(circle at 80% 70%, #20c99788 0%, transparent 60%),
+              radial-gradient(circle at 60% 20%, #6610f288 0%, transparent 60%);
+  animation: pan-bg 10s linear infinite alternate;
+}
+@keyframes pan-bg {
+  0% {
+    background-position: 20% 30%, 80% 70%, 60% 20%;
+  }
+  100% {
+    background-position: 40% 60%, 60% 40%, 80% 10%;
+  }
+}
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+.text-shadow {
+  text-shadow: 0 2px 16px #000a, 0 1px 2px #0008;
+}
+
+/* Estilos para fondo SVG animado tipo agua neón en la sección hero */
+.hero-svg-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(2px) brightness(1.2) saturate(1.5);
+}
+@keyframes wave-move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.hero-svg-bg .wave {
+  animation: wave-move 12s linear infinite;
+}
+
+/* Estilos para imágenes de la galería en Magic4rt */
+.gallery-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  object-position: center center;
+  border-radius: 1.5rem !important;
+  margin-bottom: 20px;
+  background: #222;
+  padding: 10px;
+  display: block;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.25);
+}
