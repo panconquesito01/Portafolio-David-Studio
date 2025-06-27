@@ -3,41 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio | Página no encontrada</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" href="assets/images/favicon.ico">
-  <meta name="description" content="Página no encontrada - Portafolio de David Steven Rivera Alfaro.">
-  <meta property="og:title" content="404 | David Steven Rivera Alfaro">
-  <meta property="og:description" content="Página no encontrada en el portafolio web.">
-  <meta property="og:image" content="assets/images/og-image.png">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="404 | David Steven Rivera Alfaro">
-  <meta name="twitter:description" content="Página no encontrada en el portafolio web.">
-  <meta name="twitter:image" content="assets/images/og-image.png">
+  <title>Error 404 - Página no encontrada</title>
 </head>
-<body class="bg-dark text-light d-flex flex-column min-vh-100">
-  <div class="container text-center my-auto py-5 animate__animated animate__fadeIn">
-    <h1 class="display-1 fw-bold">404</h1>
-    <p class="lead mb-4">¡Ups! La página que buscas no existe.</p>
-    <a href="index.html" class="btn btn-primary btn-lg"><i class="bi bi-house-door"></i> Volver al inicio</a>
-    <!-- Botón volver a inicio -->
-    <a href="index.html" class="btn btn-accent mt-4">Volver a Inicio</a>
-  </div>
-  <footer class="mt-auto py-4 bg-black text-center text-light">
-    <div class="container">
-      <div class="mb-3">
-        <a href="https://github.com/" target="_blank" class="text-light me-3 fs-4"><i class="bi bi-github"></i></a>
-        <a href="https://linkedin.com/" target="_blank" class="text-light me-3 fs-4"><i class="bi bi-linkedin"></i></a>
-        <a href="mailto:correo@ejemplo.com" class="text-light fs-4"><i class="bi bi-envelope"></i></a>
-      </div>
-      <div class="small">&copy; 2025 Tu Nombre. Todos los derechos reservados.</div>
-    </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
+<body>
+<div class="mars"></div>
+<img src="https://assets.codepen.io/1538474/404.svg" class="logo-404" />
+<img src="https://assets.codepen.io/1538474/meteor.svg" class="meteor" />
+<p class="title">¡Oh no!</p>
+<p class="subtitle">
+	Estás escribiendo mal la URL <br /> o solicitando una página que ya no existe.
+</p>
+<div align="center">
+	<a class="btn-back" href="index.html">Volver a la página anterior</a>
+</div>
+<img src="https://assets.codepen.io/1538474/astronaut.svg" class="astronaut" />
+<img src="https://assets.codepen.io/1538474/spaceship.svg" class="spaceship" />
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
+
+@keyframes floating {
+    from { transform: translateY(0px); }
+    65%  { transform: translateY(15px); }
+    to   { transform: translateY(-0px); }
+}
+
+html {
+  height: 100%;
+}
+
+body{
+  background-image: url('https://assets.codepen.io/1538474/star.svg'),linear-gradient(to bottom, #05007A, #4D007D);
+  height: 100%;
+  margin: 0;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.mars{
+  left:0;
+  right:0;
+  bottom:0;
+  position:absolute;
+  height: 27vmin;
+  background: url('https://assets.codepen.io/1538474/mars.svg') no-repeat bottom center;
+  background-size: cover;
+}
+
+.logo-404{
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 16vmin;
+  width: 30vmin;
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+  .logo-404 {
+    top: 45vmin;
+  }
+  .title {
+    margin-top: 65vmin;
+  }
+  .btn-back {
+    font-size: 3.5vmin;
+  }
+  .astronaut {
+    top: 2vmin;
+  }
+  .spaceship {
+    width: 45vmin;
+    bottom: 18vmin;
+  }
+}
+
+.meteor{
+  position: absolute;
+  right: 2vmin;
+  top: 16vmin;
+}
+
+.title{
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  font-size: 5vmin;
+  margin-top: 31vmin;
+}
+
+.subtitle{
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 3.5vmin;
+  margin-top: -1vmin;
+  margin-bottom: 9vmin;
+}
+
+.btn-back{
+  border: 1px solid white;
+  color: white;
+  height: 5vmin;
+  padding: 12px;
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  border-radius: 5px;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-back:hover{
+  background: white;
+  color: #4D007D;
+}
+
+.astronaut{
+  position: absolute;
+  top: 18vmin;
+  left: 10vmin;
+  height: 30vmin;
+  animation: floating 3s infinite ease-in-out;
+}
+
+.spaceship{
+  position: absolute;
+  bottom: 15vmin;
+  right: 24vmin;
+}
+</style>
+<script>
+	// diseño de 
+// https://www.uplabs.com/posts/404-page-ec3ed676-77f6-49c1-9134-83a5fa17c17b
+</script>
 </body>
 </html>
